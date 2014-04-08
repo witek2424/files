@@ -104,6 +104,7 @@
         android:autoLink="web"
         android:clickable="true"
         android:cursorVisible="true"
+        android:enabled="false"
         android:linksClickable="true"
         android:text="@string/Update" />
 

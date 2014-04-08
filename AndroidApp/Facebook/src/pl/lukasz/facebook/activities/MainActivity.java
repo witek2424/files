@@ -4,6 +4,8 @@ import pl.lukasz.facebook.Consts;
 import pl.lukasz.facebook.FacebookConnector;
 import pl.lukasz.facebook.R;
 import pl.lukasz.facebook.Utils;
+import pl.lukasz.facebook.dialogs.UpdateCompleteDialog;
+import pl.lukasz.facebook.tasks.OnTaskCompleteListener;
 import pl.lukasz.facebook.tasks.UpdateTask;
 import android.app.Activity;
 import android.content.Intent;
@@ -124,7 +126,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	
 	private void tryUpdate() {
 		if (isFromFilled()) {
-			new UpdateTask(this, progressBar).execute();
+			new UpdateTask(progressBar, new OnUpdatingEndListener()).execute();
 			connector.postOnWall(); 
 		}
 	}
@@ -160,5 +162,15 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		
 		return true;
+	}
+	
+	private class OnUpdatingEndListener implements OnTaskCompleteListener {
+
+		@Override
+		public void onTaskComplete() {
+			new UpdateCompleteDialog(MainActivity.this).show();
+			soBT.setEnabled(true);
+		}
+		
 	}
 }

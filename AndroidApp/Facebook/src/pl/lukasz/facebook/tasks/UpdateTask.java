@@ -7,12 +7,12 @@ import android.widget.ProgressBar;
 
 public class UpdateTask extends AsyncTask<Void, Void, Void> {
 
-	private Context context;
 	private ProgressBar progressBar;
+	private OnTaskCompleteListener listener;
 
-	public UpdateTask(Context context, ProgressBar progressBar) {
-		this.context = context;
+	public UpdateTask(ProgressBar progressBar, OnTaskCompleteListener listener) {
 		this.progressBar = progressBar;
+		this.listener = listener;
 	}
 	
 	@Override
@@ -29,7 +29,7 @@ public class UpdateTask extends AsyncTask<Void, Void, Void> {
 	
 	@Override
 	protected void onPostExecute(Void result) {
-		new UpdateCompleteDialog(context).show();
+		listener.onTaskComplete();
 	}
 	
 	private void simulateProgress() {
@@ -43,16 +43,6 @@ public class UpdateTask extends AsyncTask<Void, Void, Void> {
 			}
 		}
 	}
-	
-	private class UpdateCompleteDialog extends AlertDialog.Builder {
 
-		public UpdateCompleteDialog(Context context) {
-			super(context);
-			
-			setTitle("Update!");
-			setMessage("Update 2.0 Available Download Now!");
-			setPositiveButton("OK", null);
-		}	
-	}
 }
 	
