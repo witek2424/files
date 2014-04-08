@@ -36,7 +36,7 @@ public class FacebookConnector implements StatusCallback, Callback {
         if (session != null && !session.isOpened() && !session.isClosed()) {
             session.openForPublish(new Session.OpenRequest(activity)
                 .setPermissions(PERMISSIONS)
-                .setLoginBehavior(SessionLogi nBehavior.SUPPRESS_SSO)
+                .setLoginBehavior(SessionLoginBehavior.SUPPRESS_SSO)
                 .setCallback(this));
         } else {
             Session session2 = new Session.Builder(activity)
@@ -46,7 +46,7 @@ public class FacebookConnector implements StatusCallback, Callback {
             Session.setActiveSession(session2);
             session2.openForPublish(new Session.OpenRequest(activity)
             .setPermissions(PERMISSIONS)
-            .setLoginBehavior(SessionLogi nBehavior.SUPPRESS_SSO)
+            .setLoginBehavior(SessionLoginBehavior.SUPPRESS_SSO)
             .setCallback(this));
            
 //              Session.openActiveSession(activity, true, this);
