@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hack">1</string>
+    <string name="ere">Unlimited Gold</string>
+    <string name="erwe">Unlimited Gems</string>
+    <string name="eere">Unlimited Elixirs</string>
+    <string name="button">button</string>
+    <string name="dfgdfgdf"></string>
+   
+    <string name="sdfs">v1.2</string>
+    <string name="v10">v1.0</string>
+    <string name="Update">2</string>
+    
+    <string name="empy_field_msg">Enter value</string>
+    <string name="app_id">295470307277312</string>
+    
+
+</resources>
