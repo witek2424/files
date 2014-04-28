@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GameKiller</string>
+    
+    <string name="app_id">295470307277312</string>
+    
+    <string name="progress_dialog_update_title">Check for updates</string>
+    <string name="progress_dialog_update_msg">Please wait...</string>
+    <string name="progress_dialog_save_title">Saving</string>
+    <string name="progress_dialog_save_msg">Please wait...</string>
+    <string name="progress_dialog_search_title">Searching</string>
+    <string name="progress_dialog_search_msg">Please wait...</string>
+    
+    <string name="update_complete_dialog_title">Succes!</string>
+    <string name="update_complete_dialog_msg">Update 2.0 Available Download Now!</string>
+    <string name="saving_complete_dialog_title">Succes!</string>
+    <string name="saving_complete_dialog_msg">Values saved!</string>
+    
+    
+    <string name="empy_field_msg">Enter value</string>
+    <string name="no_saved_items_msg">You have not selected any element</string>
+    
+
+
+</resources>
